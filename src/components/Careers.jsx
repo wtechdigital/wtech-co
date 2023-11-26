@@ -50,7 +50,7 @@ const includedFeatures = [
   'High talent density',
 ]
 
-export function Faqs() {
+export function Careers() {
   return (
     <section id="careers">
     <div className="bg-white">

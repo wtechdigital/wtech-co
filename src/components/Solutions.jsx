@@ -20,7 +20,7 @@ const features = [
   { name: 'Web Design and Development', description: 'Designing visually appealing, user-friendly, and responsive websites to effectively represent the brand and drive business growth.' },
 ]
 
-export function Feature2() {
+export function Solutions() {
   return (
   <section className="w-full bg-customDarkBg2" id="solutions" >
     

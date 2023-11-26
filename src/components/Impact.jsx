@@ -6,7 +6,7 @@ const stats = [
   { id: 3, name: 'in total ad spend', value: '$100 000 000+' }
 ]
 
-export function CallToAction() {
+export function Impact() {
   return (
     <section
       id="impact"

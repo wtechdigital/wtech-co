@@ -2,7 +2,7 @@
 
 
 
-export function SecondaryFeatures() {
+export function Marketing() {
   return (
     <section
       className="w-full bg-customDarkBg1 mt-10 mb-10 sm:mt-10 sm:mb-20 md:pt-[0vw]"

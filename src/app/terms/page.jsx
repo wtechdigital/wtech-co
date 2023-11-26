@@ -2,7 +2,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 
-export default function Home() {
+export default function Terms() {
   return (
     <>
       <Header />
