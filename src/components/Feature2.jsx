@@ -22,9 +22,9 @@ const features = [
 
 export function Feature2() {
   return (
-  <section className="w-full bg-customDarkBg2 ">
+  <section className="w-full bg-customDarkBg2" id="solutions" >
     
-      <div className="py-20 sm:py-32">
+      <div className="mt-0 mb-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
@@ -37,7 +37,7 @@ export function Feature2() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-9">
                 <dt className="font-semibold text-black">
-                  <CheckIcon className="absolute left-0 top-1 h-5 w-5 text-indigo-500" aria-hidden="true" />
+                  <CheckIcon className="absolute left-0 top-1 h-5 w-5 text-blue-600" aria-hidden="true" />
                   <p className='text-lg'>{feature.name}</p>
                 </dt>
                 <dd className="mt-2 text-lg text-slate-700">{feature.description}</dd>

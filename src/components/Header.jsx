@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
@@ -79,16 +78,16 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-             <NavLink href="#features">Home</NavLink>
+             <MobileNavLink href="#home">Home</MobileNavLink>
 
             <hr className="m-2 border-slate-300/40" />
-            <NavLink href="#testimonials">Solutions</NavLink>
+            <MobileNavLink href="#solutions">Solutions</MobileNavLink>
 
             <hr className="m-2 border-slate-300/40" />
-            <NavLink href="#pricing">Impact</NavLink>
+            <MobileNavLink href="#impact">Impact</MobileNavLink>
 
             <hr className="m-2 border-slate-300/40" />
-            <NavLink href="#pricing">Careers</NavLink>
+            <MobileNavLink href="#careers">Careers</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -104,17 +103,17 @@ export function Header() {
 
     {/* Logo in the center on mobile, left on md screens */}
     <div className="absolute left-1/2 transform -translate-x-1/2 md:relative md:transform-none md:-left-0 md:inline-block">
-      <Link href="#" aria-label="Home">
+      <Link href="/" aria-label="Home">
         <Logo className="h-12" /> {/* Centered logo */}
       </Link>
     </div>  
 
       {/* Navigation links on the right (hidden on small screens) */}
       <div className="hidden md:flex md:gap-x-6">
-        <NavLink href="#features">Home</NavLink>
-        <NavLink href="#testimonials">Solutions</NavLink>
-        <NavLink href="#pricing">Impact</NavLink>
-        <NavLink href="#pricing">Careers</NavLink>
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#solutions">Solutions</NavLink>
+        <NavLink href="#impact">Impact</NavLink>
+        <NavLink href="#careers">Careers</NavLink>
       </div>
 
       {/* Mobile navigation button on the right */}

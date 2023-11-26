@@ -5,11 +5,11 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: 'Wintech Digital',
+    default: 'WinTech - Digital Marketing & Growth-Driven Solutions',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    "End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed in competitive markets.",
 }
 
 const inter = Inter({

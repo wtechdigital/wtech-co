@@ -5,8 +5,8 @@
 export function SecondaryFeatures() {
   return (
     <section
-      className="w-full bg-customDarkBg1 mt-10 mb-10 sm:mt-10 sm:mb-20 md:pt-[0vw] "
-      id="features"
+      className="w-full bg-customDarkBg1 mt-10 mb-10 sm:mt-10 sm:mb-20 md:pt-[0vw]"
+      id="home"
     >
         <div className="relative isolate overflow-hiddenpy-24 sm:py-20">
       <div
@@ -40,15 +40,11 @@ export function SecondaryFeatures() {
                   “Working with WinTech has been a game-changer for our business. Their highly skilled and responsive team has implemented marketing strategies that not only boosted our website traffic and sales but also acquired over 100k clients within the required CAC, exceeding our expectations.”
                 </p>
               </blockquote>
-              <figcaption className="mt-8 flex gap-x-4">
-                <img
-                  src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                  className="mt-1 h-10 w-10 flex-none rounded-full bg-gray-50"
-                />
+              <figcaption className="mt-0 flex gap-x-4">
+                
                 <div className="text-sm leading-6">
                   <div className="font-semibold text-white">Erica</div>
-                  <div className="text-slate-700 font-bold">Able Health</div>
+                  <div className="text-slate-700 font-bold"> - Erica, Able Health</div>
                 </div>
               </figcaption>
             </figure>

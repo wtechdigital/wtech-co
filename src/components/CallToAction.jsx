@@ -9,7 +9,7 @@ const stats = [
 export function CallToAction() {
   return (
     <section
-      id="get-started-today"
+      id="impact"
       className="relative overflow-hidden bg-blue-600 py-12"
     >
       <Container className="relative">

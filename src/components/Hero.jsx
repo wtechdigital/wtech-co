@@ -4,7 +4,7 @@ import { Container } from '@/components/Container'
 export function Hero() {
   
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-22">
+    <Container className="pb-10 pt-20 text-center lg:pt-22">
       <h1 className="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-slate-900 sm:text-7xl">
       
         <span className="relative whitespace-nowrap text-blue-600">
@@ -24,7 +24,7 @@ export function Hero() {
       End-to-end marketing and growth offerings, leveraging our skilled team&apos;s forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button className="px-5.5 py-2.5 " variant="solid" color="blue" href="/register">Get In Touch</Button>
+        <Button className="px-7 py-2.5 text-lg" variant="solid" color="blue" href="mailto:support@wtech.co">Get In Touch</Button>
         
       </div>
       
