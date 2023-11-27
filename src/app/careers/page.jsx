@@ -48,9 +48,11 @@ export function Content() {
                 href="#values"
                 className="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                Learn more <span aria-hidden="true">→</span>
+                Learn more
               </a>
-
+              <a href="#positions" className="text-sm font-semibold leading-6 text-gray-900">
+                Open Positions <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
@@ -234,7 +236,7 @@ export function Mission() {
 
 export function Vacancies() {
   return (
-    <div className="bg-white px-6 py-32 lg:px-8">
+    <div className="bg-white px-6 py-32 lg:px-8" id="positions">
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <p className="text-base font-semibold leading-7 text-blue-600">Careers</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Open positions</h1>
