@@ -11,10 +11,10 @@ const testimonials = [
   [
     {
       content:
-        'TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.',
+        'Working with WinTech has been a game-changer for our business. Their highly skilled and responsive team has implemented marketing strategies that not only boosted our website traffic and sales but also acquired over 100k clients within the required CAC, exceeding our expectations.',
       author: {
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
+        name: 'Roman',
+        role: 'CEO at Able Health',
         image: avatarImage1,
       },
     },
@@ -91,9 +91,7 @@ export function Testimonials() {
             Loved by businesses worldwide.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Our software is so simple that people can’t help but fall in love
-            with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+          End-to-end marketing and growth offerings, leveraging our skilled team's forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
           </p>
         </div>
         <ul
