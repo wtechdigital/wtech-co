@@ -8,7 +8,7 @@ const faqs = [
     {
       question: 'How do you partner with your clients?',
       answer:
-        'We primarily collaborate with enterprise or mid-size businesses to assist them in acquiring new clients. Our approach involves developing information products across various industries to generate organic traffic. We then leverage this traffic to connect potential clients with our partners.',
+        'We primarily collaborate with enterprise or mid-size businesses to assist them in acquiring new clients. Our approach involves developing information products across various industries to generate organic and paid traffic. We then leverage this traffic to connect potential clients with our partners.',
     },
     {
       question: 'Do you charge retainer fees?',
