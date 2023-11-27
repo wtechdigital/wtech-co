@@ -106,13 +106,13 @@ export function Footer() {
                 placeholder="Enter your email"
               />
               <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  className="flex w-full items-center justify-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                >
-                  Subscribe
-                </button>
-              </div>
+  <button
+    type="submit"
+    className="flex w-full items-center justify-center rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+  >
+    Subscribe
+  </button>
+</div>
             </form>
           </div>
         </div>
