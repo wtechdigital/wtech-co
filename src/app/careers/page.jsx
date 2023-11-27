@@ -46,7 +46,7 @@ export function Content() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#values"
+                href="#hero"
                 className="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Learn more
@@ -204,7 +204,7 @@ export function Vacancies() {
 
 export function Hero() {
   return (
- <div className="relative isolate -z-10">
+ <div className="relative isolate -z-10" id="hero">
  <svg
    className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
    aria-hidden="true"
