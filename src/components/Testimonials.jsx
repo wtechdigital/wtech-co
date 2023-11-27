@@ -91,7 +91,7 @@ export function Testimonials() {
             Loved by businesses worldwide.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-          End-to-end marketing and growth offerings, leveraging our skilled team's forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
+          End-to-end marketing and growth offerings, leveraging our skilled team&apos;s forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
           </p>
         </div>
         <ul
