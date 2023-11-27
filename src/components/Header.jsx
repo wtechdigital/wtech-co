@@ -104,6 +104,7 @@ export function Header() {
               <NavLink href="#home">Home</NavLink>
               <NavLink href="#solutions">Solutions</NavLink>
               <NavLink href="#testimonials">Testimonials</NavLink>
+              <NavLink href="#faq">FAQ</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
