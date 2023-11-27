@@ -25,7 +25,7 @@ const faqs = [
     {
       question: 'On what terms do you usually brings customers?',
       answer:
-        'Our partnership terms can vary, including Cost Per Acquisition (CPA), revenue sharing, or a combination of both. The specific terms depend on the industry and the client&apos;s requirements.',
+        'Our partnership terms can vary, including Cost Per Acquisition (CPA), revenue sharing, or a combination of both.',
     },
     {
       question:
