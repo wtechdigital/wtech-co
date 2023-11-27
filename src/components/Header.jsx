@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
@@ -78,16 +79,11 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-             <MobileNavLink href="#home">Home</MobileNavLink>
-
+            <MobileNavLink href="#features">Features</MobileNavLink>
+            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
+            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="#solutions">Solutions</MobileNavLink>
-
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="#impact">Impact</MobileNavLink>
-
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="#careers">Careers</MobileNavLink>
+            <MobileNavLink href="/login">Sign in</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -97,31 +93,34 @@ function MobileNavigation() {
 
 export function Header() {
   return (
-  <header className="py-8  sm:py-5 ">
-  <Container> 
-  <nav className="relative z-50 flex items-center justify-center md:justify-between">
-
-    {/* Logo in the center on mobile, left on md screens */}
-    <div className="absolute left-1/2 transform -translate-x-1/2 md:relative md:transform-none md:-left-0 md:inline-block">
-      <Link href="/" aria-label="Home">
-        <Logo className="h-12" /> {/* Centered logo */}
-      </Link>
-    </div>  
-
-      {/* Navigation links on the right (hidden on small screens) */}
-      <div className="hidden md:flex md:gap-x-6">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#solutions">Solutions</NavLink>
-        <NavLink href="#impact">Impact</NavLink>
-        <NavLink href="#careers">Careers</NavLink>
-      </div>
-
-      {/* Mobile navigation button on the right */}
-      <div className="flex-grow-0 ml-auto md:hidden">
-        <MobileNavigation />
-      </div>
-    </nav>
-  </Container>
-</header>
+    <header className="py-10">
+      <Container>
+        <nav className="relative z-50 flex justify-between">
+          <div className="flex items-center md:gap-x-12">
+            <Link href="#" aria-label="Home">
+              <Logo className="h-10 w-auto" />
+            </Link>
+            <div className="hidden md:flex md:gap-x-6">
+              <NavLink href="#home">Home</NavLink>
+              <NavLink href="#solutions">Solutions</NavLink>
+              <NavLink href="#stats">Testimonials</NavLink>
+            </div>
+          </div>
+          <div className="flex items-center gap-x-5 md:gap-x-8">
+            <div className="hidden md:block">
+              <NavLink href="/login">Careers</NavLink>
+            </div>
+            <Button href="/register" color="blue">
+              <span>
+                Contact Us
+              </span>
+            </Button>
+            <div className="-mr-1 md:hidden">
+              <MobileNavigation />
+            </div>
+          </div>
+        </nav>
+      </Container>
+    </header>
   )
 }
