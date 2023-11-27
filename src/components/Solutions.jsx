@@ -22,10 +22,10 @@ const features = [
 
 export function Solutions() {
   return (
-  <section className="w-full bg-customDarkBg2" id="solutions" >
+  <section className="w-full bg-customDarkBg2 mt-10 mb-10 sm:mt-20 sm:mb-20 md:pt-[0vw]" id="solutions" >
     
       <div className="mt-0 mb-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 sm:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
             <p className="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">Comprehensive Digital Marketing Expertise</p>
