@@ -34,7 +34,7 @@ export function Hero() {
       <div className="mt-10 flex justify-center gap-x-6">
         <Button href="#solutions">Learn More</Button>
         <Button
-          href="/contact-us"
+          href="/careers"
           variant="outline"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 flex-none fill-blue-600 group-active:fill-current">

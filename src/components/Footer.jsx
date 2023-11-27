@@ -6,18 +6,18 @@ import { NavLink } from '@/components/NavLink'
 
 const navigation = {
   solutions: [
-    { name: 'Services', href: '#solutions' },
-    { name: 'Expertise', href: '#expertise' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Services', href: '/#solutions' },
+    { name: 'Expertise', href: '/#expertise' },
+    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'FAQ', href: '/#faq' },
   ],
   company: [
-    { name: 'Careers', href: '#' },
+    { name: 'Careers', href: '/careers' },
   ],
   legal: [
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Cookies Policy', href: '#' },
+    { name: 'Terms & Conditions', href: '/terms' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Cookies Policy', href: '/cookie' },
   ],
   social: [
     {
