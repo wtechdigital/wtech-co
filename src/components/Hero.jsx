@@ -4,7 +4,7 @@ import { Container } from '@/components/Container'
 export function Hero() {
   
   return (
-    <Container className="pb-10 pt-20 text-center lg:pt-22">
+    <Container className="pb-10 pt-20 text-center lg:pt-22 sm:py-32">
       <h1 className="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-slate-900 sm:text-7xl">
       
         <span className="relative whitespace-nowrap text-blue-600">

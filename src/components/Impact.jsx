@@ -10,7 +10,7 @@ export function Impact() {
   return (
     <section
       id="impact"
-      className="relative overflow-hidden bg-blue-600 py-20"
+      className="relative overflow-hidden bg-blue-600 py-32"
     >
       <Container className="relative">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
