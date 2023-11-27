@@ -6,53 +6,49 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'How do you partner with your clients?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'We primarily collaborate with enterprise or mid-size businesses to assist them in acquiring new clients. Our approach involves developing information products across various industries to generate organic traffic. We then leverage this traffic to connect potential clients with our partners.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'Do you charge retainer fees?',
+      answer: 'No, we do not charge any retainer fees. Our business model is based on building websites and mobile apps that provide valuable content to users. By attracting organic traffic, we can subsequently offer this audience to our clients.',
     },
+   
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'What verticals do you work with?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        'Currently, we service clients in selective verticals such as finance, loans, health and iGaming. ',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'On what terms do you usually brings customers?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'Our partnership terms can vary, including Cost Per Acquisition (CPA), revenue sharing, or a combination of both. The specific terms depend on the industry and the client&apos;s requirements.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'What are the requirements to work with WinTech?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'To partner with us, you should have a well-established business with an affiliate program or other tracking software that enables us to accurately track the clients we refer to you.',
     },
     {
       question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+        'Do you help to set up tracking and analytics?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'We do not provide services for setting up tracking or analytics. We partner with companies that already have robust tracking and analytics systems in place.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: 'How fast can you deliver the first customers?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        'For the verticals we specialize in, we have thousands of users visiting our products daily. We can start delivering customers within 14 days after signing the agreement.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+      question: 'How many clients can I expect?',
+      answer: 'The number of clients you can expect depends on your Cost Per Thousand Impressions (CPM). We use an automated system to rotate offers and give priority to those with high-performance products, ensuring the best results for our partners.',
     },
   ],
 ]
@@ -81,8 +77,7 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+          If you can’t find what you’re looking for, please email our support team and we will get back to you as soon as possible.
           </p>
         </div>
         <ul
