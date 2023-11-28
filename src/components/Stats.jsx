@@ -3,9 +3,9 @@ export function Stats() {
       <div className="bg-white py-24 sm:py-32" id="expertise">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Results-Driven Marketing Excellence            </h2>
-            <p className="mt-8 text-base leading-7">
+            <p className="mt-4 text-lg tracking-tight text-slate-700">
             Experience the impact of our customized strategies and proven success across varied industries in accomplishing your marketing objectives and propelling your business forward.
 
             </p>

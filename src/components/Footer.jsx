@@ -59,7 +59,7 @@ export function Footer() {
                 </ul>
               </div>
               
-              <div>
+              <div className='mt-10 md:mt-0'>
                 <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
@@ -74,7 +74,7 @@ export function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
          
-              <div className="mt-10 md:mt-0">
+              <div className="mt-0 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (

@@ -43,13 +43,13 @@ export function Hero() {
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
       End-to-end marketing and growth offerings, leveraging our skilled team&apos;s forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
       </p>
-      <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="#solutions" >
+      <div className="mt-10 flex  justify-center gap-x-6">
+        <Button className="" color="blue" href="#solutions" >
           Learn More <span aria-hidden="true"> →</span>
           </Button>
       </div>
       <div className="mt-36 lg:mt-44">
-        <p className="font-display text-base text-slate-900">
+        <p className="mt-4 text-base tracking-tight text-slate-700">
         Trusted by the world’s most innovative teams
         </p>
         <ul

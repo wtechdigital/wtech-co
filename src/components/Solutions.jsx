@@ -28,8 +28,8 @@ export function Solutions() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 sm:py-20">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">Comprehensive Digital Marketing Expertise</p>
-            <p className="mt-6 leading-7 text-lg text-slate-700">
+            <p className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Comprehensive Digital Marketing Expertise</p>
+            <p className="mt-4 text-lg tracking-tight text-slate-700">
             Elevate your brand with our digital marketing mastery SEO, SEM, display advertising, and conversion-focused web design to drive traffic, engagement, and growth.
             </p>
           </div>
