@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
 import { Header } from '@/components/Header'
-import { CalendarDaysIcon, ClockIcon, ComputerDesktopIcon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { CalendarDaysIcon, ClockIcon, ComputerDesktopIcon, GlobeAltIcon, XMarkIcon, FolderOpenIcon } from '@heroicons/react/24/outline'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon, ChevronUpIcon} from '@heroicons/react/24/outline'
@@ -19,8 +19,8 @@ export default function Careers() {
         <Hero />
         <Mission />
         <Values />
-        
         <WorkWithUs />
+        <Jorney />
         <Vacancies />
         <FAQ />
       </main>
@@ -45,10 +45,10 @@ const perks = [
     icon: ClockIcon,
   },
   {
-    name: 'Unlimited PTO',
+    name: 'Open Source Software',
     description:
-      'Take time off whenever you need it, promoting personal well-being and allowing for optimal work rejuvenation.',
-    icon: CalendarDaysIcon,
+      'We prefer open-source technologies for their innovative, flexible nature, and because they let us customize our infrastructure without the constraints of SaaS solutions.',
+    icon: FolderOpenIcon,
   },
   {
     name: 'Company-provided MacBook',
@@ -340,25 +340,25 @@ const steps = [
   {
     name: 'Recruitment Screen',
     description:
-      'Exciting news! Once your application is accepted, our recruiters will reach out to you to provide job details, outline the next steps, and give you an opportunity to showcase your past experience and shine.',
+      'Upon acceptance of your application, our recruiting team will be in touch with job specifics, guide you through the following stages, and offer you a chance to highlight your previous experience.',
     date: 'Step 1',
   },
   {
     name: 'Technical interview',
     description:
-      "If your interview feedback is positive, you'll advance to the next step: meeting with a potential team member. During this round, we will delve deeper into technical details, so be prepared to discuss specifics and demonstrate your expertise!",
+      "In this round, we'll focus more on technical aspects, so please be ready to discuss the specifics and showcase your expertise!",
     date: 'Step 2',
   },
   {
     name: 'Management Interview',
     description:
-      "In the final stage, you'll have a conversation with your potential future manager. This is where you can learn more about our culture and values, helping you to determine if we're the right fit for you.",
+      "You will engage in a discussion with your potential future manager. This conversation is an opportunity for you to gain insights into our company culture and values, ensuring that we are the perfect match for your career aspirations.",
     date: 'Step 3',
   },
   {
     name: 'Offer stage',
     description:
-      "If all goes smoothly, you'll soon receive an offer from us. Get ready to join the team — welcome aboard with excitement!",
+      "If everything proceeds smoothly, you can expect to receive an offer from us soon. Get ready to join our team and prepare for an exciting welcome aboard!",
     date: 'Step 4',
   },
 ]
@@ -571,7 +571,7 @@ export function Vacancies() {
                   </Disclosure>
                 ))}
           </dl>
-          <p className="mt-10 text-lg tracking-tight md:text-left text-left  text-slate-700">
+          <p className="mt-4 text-sm tracking-tight md:text-left text-left  text-slate-700">
             All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by law.
             </p>
         </div>
