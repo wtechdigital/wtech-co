@@ -12,7 +12,7 @@ import logoTuple from '@/images/logos/tuple.svg'
 export function Hero() {
   
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32" id="#home">
+    <Container className="pb-16 pt-20 text-center  lg:pt-32" id="#home">
   <div className="mb-8 flex justify-center">
   <div className="flex items-center space-x-2 rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 fill-blue-600 group-active:fill-current">
@@ -25,7 +25,7 @@ export function Hero() {
     </a>
   </div>
 </div>
-      <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+      <h1 className="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-slate-900 sm:text-7xl">
       
         <span className="relative whitespace-nowrap text-blue-600">
           <svg

@@ -113,9 +113,9 @@ export function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-16 mb-16">
+        <div className="mx-auto max-w-3xl py-16 mb-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
             <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -134,7 +134,7 @@ export function Hero() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#mission"
-                className="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600"
               >
                 Learn more
               </a>
