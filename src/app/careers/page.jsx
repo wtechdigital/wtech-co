@@ -367,7 +367,7 @@ export  function Jorney() {
   return (
 
     
-    <div className="relative isolate overflow-hidden  py-0 sm:py-0">
+    <div className="relative isolate overflow-hidden  py-0 mt-20 sm:mb-10 sm:mt-10 sm:py-20">
       
       <div className=" ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
