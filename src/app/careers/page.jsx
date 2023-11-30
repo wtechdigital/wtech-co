@@ -100,7 +100,7 @@ export function WorkWithUs() {
 
 export function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="relative isolate w-full h-screen px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -232,7 +232,7 @@ const values = [
 
 export  function Mission() {
   return (
-    <div className="relative isolate -z-10" id="mission">
+    <div className="relative isolate  -z-10" id="mission">
           <svg
             className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
             aria-hidden="true"
