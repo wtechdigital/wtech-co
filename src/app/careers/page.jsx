@@ -128,7 +128,7 @@ export function Hero() {
           <span className="relative">Careers</span>
         </span>{' '} at WinTech
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
             Join our mission to excel and lead in our industry. We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
