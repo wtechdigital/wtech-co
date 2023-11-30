@@ -18,7 +18,6 @@ export default function Home() {
         <Solutions />
         <CallToAction />
         <Stats />
-        <Testimonials />
         <Faqs />
       </main>
       <Footer />
