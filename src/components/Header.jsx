@@ -45,7 +45,9 @@ function MobileNavIcon({ open }) {
   )
 }
 
-function MobileNavigation() {
+function MobileNavigation({ page }) {
+  const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
+
   return (
     <Popover>
       <Popover.Button
@@ -79,19 +81,46 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="/#features">Features</MobileNavLink>
-            <MobileNavLink href="/#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="/#pricing">Pricing</MobileNavLink>
-            <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            {links.map((link, index) => (
+            <MobileNavLink key={index} href={link.href}>{link.text}</MobileNavLink>
+              ))}
+
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
     </Popover>
   )
 }
+const pageLinks = {
+  main: [
+    { href: "/#home", text: "Home" },
+    { href: "/#solutions", text: "Solutions" },
+    { href: "/#testimonials", text: "Testimonials" },
+    { href: "/#faq", text: "FAQ" },
+    // ... other links for main page
+  ],
+  careers: [
+    { href: "/", text: "Home" },
+    { href: "/careers#mission", text: "Mission" },
+    { href: "/careers#values", text: "Values" },
+    { href: "/careers#workwithus", text: "Work" },
+    // ... other links for careers page
+  ],
+  contact: [
+    // ... other links for careers page
+  ]
+};
 
-export function Header() {
+const pageButtons = {
+  main: { href: "/careers", text: "Careers" },
+  careers: { href: "/careers#positions", text: "Vacancies" },
+  // Add other pages as needed
+};
+
+export function Header({ page }) {
+  const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
+  const buttonConfig = pageButtons[page] || pageButtons.main; // Fallback to main button config if page type is not defined
+
   return (
     <header className="py-10 ">
       <Container>
@@ -101,16 +130,15 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
-              <NavLink href="/#home">Home</NavLink>
-              <NavLink href="/#solutions">Solutions</NavLink>
-              <NavLink href="/#testimonials">Testimonials</NavLink>
-              <NavLink href="/#faq">FAQ</NavLink>
+             {links.map((link, index) => (
+            <NavLink key={index} href={link.href}>{link.text}</NavLink>
+              ))}
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
 
             <Button
-          href="/careers"
+          href={buttonConfig.href}
           variant="outline"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 flex-none fill-blue-600 group-active:fill-current">
@@ -118,17 +146,17 @@ export function Header() {
   <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
 </svg>
 
-          <span className="ml-3">Careers</span>
+          <span className="ml-3">{buttonConfig.text}</span>
         </Button>
         <div className="hidden md:block">
-            <Button href="/register" color="blue">
+            <Button href="/contact" color="blue">
               <span>
                 Contact Us
               </span>
             </Button>
             </div>
             <div className="-mr-1 md:hidden">
-              <MobileNavigation />
+              <MobileNavigation page={page} />
             </div>
           </div>
         </nav>

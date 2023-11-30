@@ -12,7 +12,7 @@ import { Faqs } from '@/components/Faqs'
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header page="main" />
       <main>
         <Hero />
         <Solutions />
