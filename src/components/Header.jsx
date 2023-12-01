@@ -46,7 +46,7 @@ function MobileNavIcon({ open }) {
 }
 
 function MobileNavigation({ page }) {
-  const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
+  const links = pageLinksMobile[page] || pageLinksMobile.main; // Fallback to main if page type is not defined
 
   return (
     <Popover>
@@ -103,7 +103,29 @@ const pageLinks = {
     { href: "/", text: "Home" },
     { href: "/careers#mission", text: "Mission" },
     { href: "/careers#values", text: "Values" },
-    { href: "/careers#workwithus", text: "Work" },
+    { href: "/careers#workwithus", text: "Work with Us" },
+    // ... other links for careers page
+  ],
+  contact: [
+    // ... other links for careers page
+  ]
+};
+
+const pageLinksMobile = {
+  main: [
+    { href: "/#home", text: "Home" },
+    { href: "/#solutions", text: "Solutions" },
+    { href: "/#testimonials", text: "Testimonials" },
+    { href: "/#faq", text: "FAQ" },
+    { href: "/contact", text: "Contact Us" },
+    // ... other links for main page
+  ],
+  careers: [
+    { href: "/", text: "Home" },
+    { href: "/careers#mission", text: "Mission" },
+    { href: "/careers#values", text: "Values" },
+    { href: "/careers#workwithus", text: "Work with Us" },
+    { href: "/contact", text: "Contact Us" },
     // ... other links for careers page
   ],
   contact: [
@@ -120,7 +142,7 @@ const pageButtons = {
 export function Header({ page }) {
   const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
   const buttonConfig = pageButtons[page] || pageButtons.main; // Fallback to main button config if page type is not defined
-
+  const showButton = page === 'main' || (page !== 'careers' && page !== true);
   return (
     <header className="py-10 ">
       <Container>
@@ -136,7 +158,7 @@ export function Header({ page }) {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-
+          {showButton && (
             <Button
           href={buttonConfig.href}
           variant="outline"
@@ -148,6 +170,7 @@ export function Header({ page }) {
 
           <span className="ml-3">{buttonConfig.text}</span>
         </Button>
+        )}
         <div className="hidden md:block">
             <Button href="/contact" color="blue">
               <span>

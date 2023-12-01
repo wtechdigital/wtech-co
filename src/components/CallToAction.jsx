@@ -26,7 +26,7 @@ export function CallToAction() {
           <p className="mt-4 text-lg tracking-tight text-white">
           Unlock the power of targeted marketing strategies designed for real-world results. Partner with WinTech for expert insights and innovative solutions.
           </p>
-          <Button href="/register" color="white" className="mt-10">
+          <Button href="/contact" color="white" className="mt-10">
             Contact Us
           </Button>
         </div>

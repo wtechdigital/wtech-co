@@ -8,7 +8,6 @@ const navigation = {
   solutions: [
     { name: 'Services', href: '/#solutions' },
     { name: 'Expertise', href: '/#expertise' },
-    { name: 'Testimonials', href: '/#testimonials' },
     { name: 'FAQ', href: '/#faq' },
   ],
   company: [
