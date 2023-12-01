@@ -93,9 +93,9 @@ function MobileNavigation({ page }) {
 }
 const pageLinks = {
   main: [
-    { href: "/#home", text: "Home" },
-    { href: "/#solutions", text: "Solutions" },
-    { href: "/#testimonials", text: "Testimonials" },
+    { href: "/", text: "Home" },
+    { href: "/#service", text: "Service" },
+    { href: "/#expertise", text: "Expertise" },
     { href: "/#faq", text: "FAQ" },
     // ... other links for main page
   ],
@@ -113,9 +113,9 @@ const pageLinks = {
 
 const pageLinksMobile = {
   main: [
-    { href: "/#home", text: "Home" },
-    { href: "/#solutions", text: "Solutions" },
-    { href: "/#testimonials", text: "Testimonials" },
+    { href: "/", text: "Home" },
+    { href: "/#service", text: "Service" },
+    { href: "/#expertise", text: "Expertise" },
     { href: "/#faq", text: "FAQ" },
     { href: "/contact", text: "Contact Us" },
     // ... other links for main page

@@ -6,7 +6,7 @@ import { NavLink } from '@/components/NavLink'
 
 const navigation = {
   solutions: [
-    { name: 'Services', href: '/#solutions' },
+    { name: 'Services', href: '/#service' },
     { name: 'Expertise', href: '/#expertise' },
     { name: 'FAQ', href: '/#faq' },
   ],

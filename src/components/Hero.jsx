@@ -64,7 +64,7 @@ export function Hero() {
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="mt-4 text-base tracking-tight text-slate-700">
-        Trusted by the world’s most innovative brands
+        Trusted by the world’s most innovative brands:
         </p>
         <ul
           role="list"
