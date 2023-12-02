@@ -1,9 +1,11 @@
 'use client'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
+import ReCAPTCHA from "react-google-recaptcha";
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/20/solid'
 
 export default function Cookie() {
   return (
@@ -21,8 +23,88 @@ function classNames(...classes) {
   }
   
   export function Contact() {
+
+    const [captchaValue, setCaptchaValue] = useState(null);
+
+    const onCaptchaChange = useCallback(token => {
+        setCaptchaValue(token);
+      }, []);
+
+      
+    
     const [agreed, setAgreed] = useState(false)
+
+    const [formState, setFormState] = useState({
+      status: '',
+      message: '',
+    })
+    const [ attemptedSubmit, setAttemptedSubmit ] = useState(false);
+    const [showBanner, setShowBanner] = useState(false);
+
+
+
+    const handleSubmit = async (event) => {
+        setAttemptedSubmit(true);
+        event.preventDefault(); // Prevent default form submission
   
+       
+
+      // Validate form
+      const form = event.target
+      if (!form.checkValidity()) {
+        event.stopPropagation()
+        setFormState({ status: 'invalid', message: 'Please fill out all required fields correctly.' })
+        return
+      }
+
+        if (!captchaValue) {
+            setFormState({ status: 'invalid', message: 'Please solve the CAPTCHA to proceed.'});
+            return;
+        }
+  
+      // Prepare form data for submission
+      const formData = new FormData(form);
+        const object = {};
+        formData.forEach((value, key) => {
+        if (key !== 'g-recaptcha-response') { // Make sure that the reCAPTCHA response isn't included
+            object[key] = value;
+        }
+        });
+        const json = JSON.stringify(object);
+  
+      // Reset form state
+      setFormState({ status: 'submitting', message: 'Please wait...' })
+      setAttemptedSubmit(false);
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: json,
+        })
+  
+        const result = await response.json()
+        if (response.ok) {
+          // Handle successful submission
+          setFormState({ status: 'success', message: "Message received, we'll be in touch with you shortly!" })
+          form.reset() // Reset the form after successful submission
+          setShowBanner(true);
+          setTimeout(() => {
+            setShowBanner(false); // Automatically hide the banner after 5 seconds
+          }, 15000);
+        } else {
+          // Handle errors
+          setFormState({ status: 'error', message: result.message })
+        }
+      } catch (error) {
+        // Handle network errors
+        setFormState({ status: 'error', message: "Something went wrong! Please try again." })
+        console.error('Form submission error', error)
+      }
+    }
+
     return (
       <div className="isolate bg-white px-6 py-10 sm:py-10 mb-10 lg:px-8">
         <div
@@ -43,19 +125,21 @@ function classNames(...classes) {
             Let&apos;s discuss your business needs and how Wintech can help!
           </p>
         </div>
-        <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <form onSubmit={handleSubmit}  noValidate className="mx-auto mt-16 max-w-xl sm:mt-20">
+        <input type="hidden" name="access_key" value="aa9e6de9-23e1-4597-9b4b-7dac41eedf84" />
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
-              <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+              <label htmlFor="first-name"  className="block text-sm font-semibold leading-6 text-gray-900">
                 First name
               </label>
               <div className="mt-2.5">
                 <input
                   type="text"
+                  required
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className={`block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${attemptedSubmit && 'invalid:ring-red-500 invalid:border-red-500 invalid:text-red-600'}`}
                 />
               </div>
             </div>
@@ -69,7 +153,7 @@ function classNames(...classes) {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -83,7 +167,7 @@ function classNames(...classes) {
                   name="company"
                   id="company"
                   autoComplete="organization"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -94,45 +178,15 @@ function classNames(...classes) {
               <div className="mt-2.5">
                 <input
                   type="email"
+                  required
                   name="email"
                   id="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className={`block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${attemptedSubmit && 'invalid:ring-red-500 invalid:border-red-500 invalid:text-red-600'}`}
                 />
               </div>
             </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
-                Phone number
-              </label>
-              <div className="relative mt-2.5">
-                <div className="absolute inset-y-0 left-0 flex items-center">
-                  <label htmlFor="country" className="sr-only">
-                    Country
-                  </label>
-                  <select
-                    id="country"
-                    name="country"
-                    className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                  >
-                    <option>US</option>
-                    <option>CA</option>
-                    <option>EU</option>
-                  </select>
-                  <ChevronDownIcon
-                    className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                </div>
-                <input
-                  type="tel"
-                  name="phone-number"
-                  id="phone-number"
-                  autoComplete="tel"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
+            
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
                 Message
@@ -140,9 +194,10 @@ function classNames(...classes) {
               <div className="mt-2.5">
                 <textarea
                   name="message"
+                  required
                   id="message"
                   rows={4}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className={`block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${attemptedSubmit && 'invalid:ring-red-500 invalid:border-red-500 invalid:text-red-600'}`}
                   defaultValue={''}
                 />
               </div>
@@ -153,8 +208,8 @@ function classNames(...classes) {
                   checked={agreed}
                   onChange={setAgreed}
                   className={classNames(
-                    agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                    'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                    agreed ? 'bg-blue-600' : 'bg-gray-200',
+                    'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
                   )}
                 >
                   <span className="sr-only">Agree to policies</span>
@@ -169,22 +224,42 @@ function classNames(...classes) {
               </div>
               <Switch.Label className="text-sm leading-6 text-gray-600">
                 By selecting this, you agree to our{' '}
-                <a href="#" className="font-semibold text-blue-600">
+                <a href="/privacy" className="font-semibold text-blue-600">
                   privacy&nbsp;policy
                 </a>
                 .
               </Switch.Label>
             </Switch.Group>
           </div>
+          <ReCAPTCHA className="mt-10"
+              sitekey="6LeaTCQpAAAAAFYJL5OjezFTZ9TCcnvWpCZUFoBU"
+              onChange={onCaptchaChange}
+            />
+          {showBanner && (
+        <div className="pointer-events-auto fixed inset-x-0 bottom-0 z-50 sm:flex sm:justify-center sm:px-6">
+          <div className="flex w-full max-w-2xl items-center justify-between gap-x-6 bg-blue-600 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
+            <p className="text-sm leading-6 text-white">
+              <strong className="font-semibold">{formState.message}</strong>
+              {/* Other elements in the banner */}
+            </p>
+          </div>
+        </div>
+      )}
           <div className="mt-10">
             <button
+              disabled={!agreed || !captchaValue}
               type="submit"
-              className="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className={`block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
+                agreed && captchaValue
+                  ? "bg-blue-600 hover:bg-blue-500 focus-visible:outline-blue-600" 
+                  : "bg-gray-400 cursor-not-allowed"
+              }`}
             >
               Let&apos;s talk
             </button>
           </div>
         </form>
+        
       </div>
     )
   }
