@@ -60,7 +60,7 @@ export function Hero() {
       End-to-end marketing and growth offerings, leveraging our skilled team&apos;s forward-thinking techniques and extensive industry insights to enable businesses to prosper in competitive markets.
       </p>
       <div className="mt-10 flex  justify-center gap-x-6">
-        <Button  color="blue" href="#solutions" >
+        <Button  color="blue" href="#service" >
           Learn More <span aria-hidden="true"> →</span>
           </Button>
       </div>
