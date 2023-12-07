@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
+import backgroundImage from '@/images/background-faqs.webp'
 
 const faqs = [
   [
@@ -63,7 +63,8 @@ export function Faqs() {
       <Image
         className="absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]"
         src={backgroundImage}
-        alt=""
+        title='FAQ Title'
+        alt="Frequently asked questions"
         width={1558}
         height={946}
         unoptimized

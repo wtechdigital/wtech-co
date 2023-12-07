@@ -74,13 +74,13 @@ export function Hero() {
         >
           {[
             [
-              { name: 'Transistor', logo: logoTransistor },
-              { name: 'Tuple', logo: logoTuple },
-              { name: 'StaticKit', logo: logoStaticKit },
+              { name: 'CG Affiliate', title:"CG Affiliate", logo: logoTransistor },
+              { name: 'Bet365', title:"Bet365", logo: logoTuple },
+              { name: 'Penn', title:"Penn", logo: logoStaticKit },
             ],
             [
-              { name: 'Mirage', logo: logoMirage },
-              { name: 'Laravel', logo: logoLaravel },
+              { name: 'Entair', title:"Entair", logo: logoMirage },
+              { name: 'Draft Kings', title:"Draft Kings", logo: logoLaravel },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
@@ -90,7 +90,7 @@ export function Hero() {
               >
                 {group.map((company) => (
                   <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                    <Image src={company.logo} alt={company.name} title={company.title} unoptimized />
                   </li>
                 ))}
               </ul>
