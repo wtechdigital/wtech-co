@@ -158,6 +158,8 @@ export function Header({ page }) {
           <meta property="og:title" content="WinTech - Digital Marketing Growth-Driven Solutions" />
 		      <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
 		      <meta property="og:url" content="https://wtech.co" />
+          <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
+          <meta name="robots" content="index,follow" />
           <meta property="og:image" content={TweeterLogo.src} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -174,6 +176,8 @@ export function Header({ page }) {
         <title>Careers at WinTech - Join the team of professionals</title>
         <meta name="description" content="We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard."></meta>
         <meta property="og:title" content="Careers at WinTech - Join the team of professionals" />
+        <meta name="robots" content="index,follow" />
+        <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
 		    <meta property="og:description" content="We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard." />
 		    <meta property="og:url" content={"https://wtech.co/careers"} />
         <meta property="og:image" content={TweeterLogo.src} />
@@ -192,6 +196,8 @@ export function Header({ page }) {
         <title>WinTech - Contact Us</title>
         <meta name="description" content="Let's discuss your business needs and how Wintech can help! Write us a message and we will get back to you shortly!"></meta>
         <meta property="og:title" content="WinTech - Contact Us" />
+        <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
+        <meta name="robots" content="index,follow" />
 		    <meta property="og:description" content="Let's discuss your business needs and how Wintech can help! Write us a message and we will get back to you shortly! " />
 		    <meta property="og:url" content={"https://wtech.co/contact"} />
         <meta property="og:image" content={TweeterLogo.src} />
@@ -210,6 +216,8 @@ export function Header({ page }) {
         <title>WinTech Digital - Terms & Conditions</title>
         <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
         <meta property="og:title" content="WinTech Digital - Terms & Conditions" />
+        <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
+        <meta name="robots" content="index,follow" />
 		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
 		    <meta property="og:url" content={"https://wtech.co/terms"} />
         <meta property="og:image" content={TweeterLogo.src} />
@@ -228,8 +236,10 @@ export function Header({ page }) {
         <title>WinTech Digital - Privacy Policy</title>
         <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
         <meta property="og:title" content="WinTech Digital - Privacy Policy" />
+        <meta name="robots" content="index,follow" />
 		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
 		    <meta property="og:url" content={"https://wtech.co/terms"} />
+        <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
         <meta property="og:image" content={TweeterLogo.src} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -246,6 +256,8 @@ export function Header({ page }) {
         <title>WinTech Digital - Cookie Policy</title>
         <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
         <meta property="og:title" content="WinTech Digital - Cookie Policy" />
+        <link rel="alternate" hrefLang="en-us" href="https://wtech.co" />
+        <meta name="robots" content="index,follow" />
 		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
 		    <meta property="og:url" content={"https://wtech.co/terms"} />
         <meta property="og:image" content={TweeterLogo.src} />

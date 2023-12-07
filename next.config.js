@@ -2,6 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
+  
     async rewrites() {
       return [
         // Rewrite rule for sitemap
@@ -12,5 +13,22 @@ const nextConfig = {
         // Additional rewrites...
       ];
     },
+  
+    async headers() {
+      return [
+        {
+          // Apply these headers to all routes in your application
+          source: "/:path*",
+          headers: [
+            {
+              key: 'X-Robots-Tag',
+              value: 'index,follow',
+            },
+          ],
+        },
+        // Additional headers...
+      ];
+    },
   };
+  
   module.exports = nextConfig;
