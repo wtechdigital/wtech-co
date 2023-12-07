@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/soli
 export default function Terms() {
   return (
     <>
-      <Header />
+      <Header page="terms" />
       <main>
         <Content />
       </main>

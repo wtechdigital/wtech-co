@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/soli
 export default function Cookie() {
   return (
     <>
-      <Header />
+      <Header page="cookie" />
       <main>
         <Content />
       </main>

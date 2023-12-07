@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/soli
 export default function Privacy() {
   return (
     <>
-      <Header />
+      <Header page="privacy"  />
       <main>
         <Content />
       </main>

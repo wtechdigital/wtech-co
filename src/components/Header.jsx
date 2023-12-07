@@ -2,13 +2,15 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import TweeterLogo from '@/public/tweeter_card.webp'
+
 
 function MobileNavLink({ href, children }) {
   return (
@@ -139,15 +141,128 @@ const pageButtons = {
   // Add other pages as needed
 };
 
+
 export function Header({ page }) {
   const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
   const buttonConfig = pageButtons[page] || pageButtons.main; // Fallback to main button config if page type is not defined
   const showButton = page === 'main' || (page !== 'careers' && page !== true);
   return (
+    
     <header className="py-10 ">
+      
+       {page === 'main' && (
+        
+          <><link rel="canonical" href="https://wtech.co" />
+          <title>WinTech - Digital Marketing Growth-Driven Solutions</title>
+          <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
+          <meta property="og:title" content="WinTech - Digital Marketing Growth-Driven Solutions" />
+		      <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+		      <meta property="og:url" content="https://wtech.co/careers" />
+          <meta property="og:image" content={TweeterLogo.src} />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="WinTech - Digital Marketing Growth-Driven Solutions" />
+          <meta name="twitter:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+          <meta name="twitter:image" content={TweeterLogo.src}  />
+          <meta name="twitter:site" content="https://wtech.co" />
+          </>
+        
+      )}
+        {page === 'careers' && (
+        
+        <><link rel="canonical" href="https://wtech.co/careers" />
+        <title>Careers at WinTech - Join the team of professionals</title>
+        <meta name="description" content="We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard."></meta>
+        <meta property="og:title" content="Careers at WinTech - Join the team of professionals" />
+		    <meta property="og:description" content="We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard." />
+		    <meta property="og:url" content={"https://wtech.co/careers"} />
+        <meta property="og:image" content={TweeterLogo.src} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://wtech.co" />
+        <meta name="twitter:title" content="Careers at WinTech - Join the team of professionals" />
+        <meta name="twitter:description" content="We seek hardworking visionaries committed to excellence and eager to contribute to a team that sets the standard." />
+        <meta name="twitter:image" content={TweeterLogo.src}  />
+        </>
+      
+    )}
+         {page === 'contact' && (
+        
+        <><link rel="canonical" href="https://wtech.co/contact" />
+        <title>WinTech - Contact Us</title>
+        <meta name="description" content="Let's discuss your business needs and how Wintech can help! Write us a message and we will get back to you shortly!"></meta>
+        <meta property="og:title" content="WinTech - Contact Us" />
+		    <meta property="og:description" content="Let's discuss your business needs and how Wintech can help! Write us a message and we will get back to you shortly! " />
+		    <meta property="og:url" content={"https://wtech.co/contact"} />
+        <meta property="og:image" content={TweeterLogo.src} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://wtech.co" />
+        <meta name="twitter:title" content="WinTech - Contact Us" />
+        <meta name="twitter:description" content="Let's discuss your business needs and how Wintech can help! Write us a message and we will get back to you shortly!" />
+        <meta name="twitter:image" content={TweeterLogo.src}  />
+        </>
+      
+    )}
+     {page === 'terms' && (
+        
+        <><link rel="canonical" href="https://wtech.co/terms" />
+        <title>WinTech Digital - Terms & Conditions</title>
+        <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
+        <meta property="og:title" content="WinTech Digital - Terms & Conditions" />
+		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+		    <meta property="og:url" content={"https://wtech.co/terms"} />
+        <meta property="og:image" content={TweeterLogo.src} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://wtech.co" />
+        <meta name="twitter:title" content="WinTech Digital - Terms & Conditions" />
+        <meta name="twitter:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+        <meta name="twitter:image" content={TweeterLogo.src}  />
+        </>
+      
+    )}
+    {page === 'privacy' && (
+        
+        <><link rel="canonical" href="https://wtech.co/terms" />
+        <title>WinTech Digital - Privacy Policy</title>
+        <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
+        <meta property="og:title" content="WinTech Digital - Privacy Policy" />
+		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+		    <meta property="og:url" content={"https://wtech.co/terms"} />
+        <meta property="og:image" content={TweeterLogo.src} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://wtech.co" />
+        <meta name="twitter:title" content="WinTech Digital - Privacy Policy" />
+        <meta name="twitter:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+        <meta name="twitter:image" content={TweeterLogo.src}  />
+        </>
+      
+    )}
+    {page === 'cookie' && (
+        
+        <><link rel="canonical" href="https://wtech.co/terms" />
+        <title>WinTech Digital - Cookie Policy</title>
+        <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
+        <meta property="og:title" content="WinTech Digital - Cookie Policy" />
+		    <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+		    <meta property="og:url" content={"https://wtech.co/terms"} />
+        <meta property="og:image" content={TweeterLogo.src} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://wtech.co" />
+        <meta name="twitter:title" content="WinTech Digital - Cookie Policy" />
+        <meta name="twitter:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
+        <meta name="twitter:image" content={TweeterLogo.src}  />
+        </>
+      
+    )}
       <Container>
+      
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
+            
             <Link href="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
@@ -185,5 +300,6 @@ export function Header({ page }) {
         </nav>
       </Container>
     </header>
+    
   )
 }
