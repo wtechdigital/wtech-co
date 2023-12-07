@@ -157,7 +157,7 @@ export function Header({ page }) {
           <meta name="description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed."></meta>
           <meta property="og:title" content="WinTech - Digital Marketing Growth-Driven Solutions" />
 		      <meta property="og:description" content="End-to-end marketing and growth services, leveraging our expert team's innovative strategies and industry insights to help clients succeed." />
-		      <meta property="og:url" content="https://wtech.co/careers" />
+		      <meta property="og:url" content="https://wtech.co" />
           <meta property="og:image" content={TweeterLogo.src} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
