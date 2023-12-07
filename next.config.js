@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
+    swcMinify: true,
     async rewrites() {
       return [
         // Rewrite rule for sitemap
@@ -12,5 +13,4 @@ const nextConfig = {
       ];
     },
   };
-  
   module.exports = nextConfig;
