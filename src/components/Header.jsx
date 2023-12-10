@@ -141,6 +141,14 @@ const pageButtons = {
   // Add other pages as needed
 };
 
+let schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Wintech Digital",
+  "url": "https://wtech.co",
+  "logo": "/logo_wtech.webp",
+  "sameAs": "https://www.linkedin.com/company/wintech-digital/"
+};
 
 export function Header({ page }) {
   const links = pageLinks[page] || pageLinks.main; // Fallback to main if page type is not defined
@@ -270,6 +278,9 @@ export function Header({ page }) {
         </>
       
     )}
+    <script 
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Container>
       
         <nav className="relative z-50 flex justify-between">
