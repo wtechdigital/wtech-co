@@ -146,7 +146,7 @@ let schema = {
   "@type": "Organization",
   "name": "Wintech Digital",
   "url": "https://wtech.co",
-  "logo": "/logo_wtech.webp",
+  "logo": "https://wtech.co/logo_wtech.webp",
   "sameAs": "https://www.linkedin.com/company/wintech-digital/"
 };
 
