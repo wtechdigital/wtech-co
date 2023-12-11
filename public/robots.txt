@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wtech.co
+
+# Sitemaps
+Sitemap: https://wtech.co/sitemap.xml
