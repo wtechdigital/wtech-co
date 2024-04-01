@@ -1,9 +1,3 @@
-import Link from 'next/link'
-
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
-
 const navigation = {
   solutions: [
     { name: 'Services', href: '/#service' },

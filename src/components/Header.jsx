@@ -98,6 +98,7 @@ const pageLinks = {
     { href: "/", text: "Home" },
     { href: "/#service", text: "Service" },
     { href: "/#expertise", text: "Expertise" },
+    { href: "/development", text: "Development" },
     { href: "/#faq", text: "FAQ" },
     // ... other links for main page
   ],
@@ -110,6 +111,14 @@ const pageLinks = {
   ],
   contact: [
     // ... other links for careers page
+  ],
+  development: [
+    { href: "/", text: "Home" },
+    { href: "/#service", text: "Service" },
+    { href: "/#expertise", text: "Expertise" },
+    { href: "/development", text: "Development" },
+    { href: "/#faq", text: "FAQ" },
+    // ... other links for main page
   ]
 };
 
@@ -118,6 +127,7 @@ const pageLinksMobile = {
     { href: "/", text: "Home" },
     { href: "/#service", text: "Service" },
     { href: "/#expertise", text: "Expertise" },
+    { href: "/development", text: "Development" },
     { href: "/#faq", text: "FAQ" },
     { href: "/contact", text: "Contact Us" },
     // ... other links for main page
