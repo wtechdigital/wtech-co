@@ -3,5 +3,7 @@
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
+  },
+  "build": "next build",
+  "postbuild": "next-sitemap --config next-sitemap.config.js"
 }

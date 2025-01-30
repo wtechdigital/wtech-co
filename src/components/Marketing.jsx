@@ -6,13 +6,13 @@ export function Marketing() {
   return (
     <section
       className="w-full bg-customDarkBg1 mt-10 mb-10 sm:mt-10 sm:mb-20 md:pt-[0vw]"
-      id="home"
+      id="testimonials"
     >
         <div className="relative isolate overflow-hiddenpy-24 sm:py-20">
       <div
         className="absolute -top-80 left-[max(6rem,33%)] -z-10 transform-gpu blur-3xl sm:left-1/2 md:top-20 lg:ml-20 xl:top-3 xl:ml-56"
         aria-hidden="true"
-      >
+      > 
         
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
