@@ -232,7 +232,7 @@ function classNames(...classes) {
             </Switch.Group>
           </div>
           <ReCAPTCHA className="mt-10"
-              sitekey="6LcwihorAAAAAHn4W2ID6_bbVldu-zlCm8yM9OV8"  //6LcwihorAAAAAHn4W2ID6_bbVldu-zlCm8yM9OV8
+              sitekey="6Lcd0RorAAAAAI9wCm_JZaC0Hy0mG__thDClfoGE"  //6LcwihorAAAAAHn4W2ID6_bbVldu-zlCm8yM9OV8
               onChange={onCaptchaChange}
             />
           {showBanner && (
